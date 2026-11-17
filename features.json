@@ -93,6 +93,35 @@
       ]
     },
     {
+      "id": "openneuro-edf",
+      "group": "Datasets",
+      "title": "OpenNeuro dataset with an EDF file",
+      "path": "/openneuro-dataset/ds003374?tab=sub-01/ses-01/ieeg/sub-01_ses-01_task-jokeit_run-01_ieeg.edf|2d50bcf6d359c464628e964b91b08d75c4aa2cf0",
+      "check": [
+        "EDF channels drawn over time",
+        "Time window and channel choice"
+      ]
+    },
+    {
+      "id": "openneuro-nifti",
+      "group": "Datasets",
+      "title": "OpenNeuro dataset with a NIfTI file",
+      "path": "/openneuro-dataset/ds000001?tab=sub-01/anat/sub-01_T1w.nii.gz|26d2ff4f763308d462f151c53e3e06f6b7d2aaaa",
+      "check": [
+        "Volume slices shown",
+        "Moving through slices"
+      ]
+    },
+    {
+      "id": "openneuro-json",
+      "group": "Datasets",
+      "title": "OpenNeuro dataset with a JSON file",
+      "path": "/openneuro-dataset/ds000001?tab=dataset_description.json|",
+      "check": [
+        "JSON contents shown"
+      ]
+    },
+    {
       "id": "nwb-overview",
       "group": "NWB file",
       "title": "NWB file overview",
@@ -184,6 +213,16 @@
       ]
     },
     {
+      "id": "nwb-videos",
+      "group": "NWB file",
+      "title": "Videos tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/70af470b-7cbe-4b9d-8490-9cdf584fd9e6/download/&dandisetId=000231&dandisetVersion=draft&tab=video-widget",
+      "check": [
+        "The file's external videos listed and playable",
+        "Order, layout, time"
+      ]
+    },
+    {
       "id": "timeseries",
       "group": "Views",
       "title": "Time series",
@@ -268,12 +307,63 @@
       ]
     },
     {
+      "id": "interval-series",
+      "group": "Views",
+      "title": "Interval series",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/41116ddf-2af8-409c-a98c-7b9c54ce3e51/download/&dandisetId=000971&dandisetVersion=draft&tab=view:IntervalSeries|/processing/behavior/behavioral_epochs/reward_port_intervals",
+      "check": [
+        "Intervals drawn on the time axis",
+        "Time window"
+      ]
+    },
+    {
+      "id": "events",
+      "group": "Views",
+      "title": "Events (ndx-events)",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/824c6229-b9d3-4848-9336-1074dc4b3ba9/download/&dandisetId=000971&dandisetVersion=draft&tab=view:Events|/processing/behavior/right_reward_times",
+      "check": [
+        "Event times drawn",
+        "Time window"
+      ]
+    },
+    {
+      "id": "behavioral-events",
+      "group": "Views",
+      "title": "Behavioral events",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/70af470b-7cbe-4b9d-8490-9cdf584fd9e6/download/&dandisetId=000231&dandisetVersion=draft&tab=view:BehavioralEvents|/processing/behavior/licks",
+      "check": [
+        "Left and right lick times drawn",
+        "Time window"
+      ]
+    },
+    {
       "id": "image",
       "group": "Views",
       "title": "Image",
       "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=/processing/ophys/SummaryImages/maximum_intensity_projection",
       "check": [
         "Image drawn",
+        "Brightness and contrast"
+      ]
+    },
+    {
+      "id": "image-collection",
+      "group": "Views",
+      "title": "Image collection",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=/stimulus/templates/StimulusTemplates",
+      "check": [
+        "All images in the collection shown",
+        "Opening one image"
+      ]
+    },
+    {
+      "id": "two-photon",
+      "group": "Views",
+      "title": "Two-photon series",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/407d6e5f-2a16-4879-b38f-b74cad7b9e24/download/&dandisetId=000871&dandisetVersion=draft&tab=view:TwoPhotonSeries|/acquisition/denoised_suite2p_motion_corrected",
+      "check": [
+        "Frames drawn",
+        "Frame slider and playback",
         "Brightness and contrast"
       ]
     },
@@ -289,6 +379,26 @@
       ]
     },
     {
+      "id": "plane-segmentation",
+      "group": "Views",
+      "title": "Plane segmentation",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=view:PlaneSegmentation|/processing/ophys/ImageSegmentation/PlaneSegmentation",
+      "check": [
+        "ROI masks drawn",
+        "Selecting ROIs"
+      ]
+    },
+    {
+      "id": "trial-aligned",
+      "group": "Views",
+      "title": "Trial-aligned series",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=view:TrialAlignedSeries|/stimulus/presentation/static_gratings^/processing/ophys/DfOverF/DfOverF",
+      "check": [
+        "ROI responses aligned to the stimulus intervals",
+        "Choosing ROIs, align column, window"
+      ]
+    },
+    {
       "id": "pose",
       "group": "Views",
       "title": "Pose estimation",
@@ -297,6 +407,16 @@
         "Markers drawn",
         "Play, trails, hiding markers",
         "Pose only, and video underneath when available"
+      ]
+    },
+    {
+      "id": "external-video",
+      "group": "Views",
+      "title": "External video",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/70af470b-7cbe-4b9d-8490-9cdf584fd9e6/download/&dandisetId=000231&dandisetVersion=draft&tab=view:ExternalFileVideo|/acquisition/behavioral video",
+      "check": [
+        "The external video file found and played",
+        "Time in sync with the recording"
       ]
     },
     {
