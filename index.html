@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neurosift v2 / v3 features</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #656d76; --line: #d0d7de;
+    --side: #f6f8fa; --active: #ddf4ff; --accent: #0969da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --fg: #e6edf3; --muted: #8d96a0; --line: #30363d;
+      --side: #161b22; --active: #1f3a5f; --accent: #4493f8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex; height: 100vh; overflow: hidden;
+  }
+  a { color: var(--accent); }
+  nav {
+    width: 240px; flex: none; overflow-y: auto;
+    background: var(--side); border-right: 1px solid var(--line); padding: 12px 0;
+  }
+  nav h1 { font-size: 15px; margin: 0 16px 8px; }
+  nav h2 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--muted); margin: 14px 16px 4px;
+  }
+  nav a {
+    display: block; padding: 3px 16px; color: var(--fg); text-decoration: none;
+  }
+  nav a:hover { background: var(--line); }
+  nav a.active { background: var(--active); font-weight: 600; }
+  main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  header {
+    flex: none; padding: 10px 16px; border-bottom: 1px solid var(--line);
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  header .info { flex: 1; min-width: 0; }
+  header h2 { margin: 0 0 4px; font-size: 17px; }
+  header ul { margin: 0; padding-left: 18px; color: var(--muted); }
+  header .nav { flex: none; display: flex; gap: 6px; align-items: center; color: var(--muted); }
+  button {
+    font: inherit; color: var(--fg); background: var(--side);
+    border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; cursor: pointer;
+  }
+  .panes { flex: 1; min-height: 0; display: flex; }
+  .pane { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .pane + .pane { border-left: 3px solid var(--line); }
+  .pane .bar {
+    flex: none; padding: 4px 10px; font-size: 12px; color: var(--muted);
+    border-bottom: 1px solid var(--line); display: flex; gap: 10px;
+  }
+  .pane .bar b { color: var(--fg); }
+  .pane iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+  @media (max-width: 900px) {
+    body { flex-direction: column; height: auto; overflow: auto; }
+    nav { width: auto; max-height: 30vh; border-right: 0; border-bottom: 1px solid var(--line); }
+    .panes { flex-direction: column; }
+    .pane { height: 80vh; }
+    .pane + .pane { border-left: 0; border-top: 3px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<nav id="nav"><h1>Neurosift v2 / v3</h1></nav>
+<main>
+  <header>
+    <div class="info">
+      <h2 id="title"></h2>
+      <ul id="check"></ul>
+    </div>
+    <div class="nav">
+      <button id="prev" title="Previous feature (k)">&larr;</button>
+      <span id="pos"></span>
+      <button id="next" title="Next feature (j)">&rarr;</button>
+    </div>
+  </header>
+  <div class="panes">
+    <div class="pane">
+      <div class="bar"><b>v2</b><a id="v2link" target="_blank" rel="noopener">open in new tab</a></div>
+      <iframe id="v2frame" title="Neurosift v2"></iframe>
+    </div>
+    <div class="pane">
+      <div class="bar"><b>v3</b><a id="v3link" target="_blank" rel="noopener">open in new tab</a></div>
+      <iframe id="v3frame" title="Neurosift v3"></iframe>
+    </div>
+  </div>
+</main>
+<script>
+(async () => {
+  const data = await (await fetch("features.json")).json();
+  const features = data.features;
+  const $ = (id) => document.getElementById(id);
+
+  // Sidebar, grouped in the order groups first appear.
+  const nav = $("nav");
+  let group = null;
+  for (const f of features) {
+    if (f.group !== group) {
+      group = f.group;
+      const h = document.createElement("h2");
+      h.textContent = group;
+      nav.appendChild(h);
+    }
+    const a = document.createElement("a");
+    a.href = `#${f.id}`;
+    a.textContent = f.title;
+    a.dataset.id = f.id;
+    nav.appendChild(a);
+  }
+
+  const current = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    return Math.max(0, features.findIndex((f) => f.id === id));
+  };
+  const go = (i) => {
+    location.hash = features[(i + features.length) % features.length].id;
+  };
+
+  const show = () => {
+    const i = current();
+    const f = features[i];
+    document.title = `${f.title} · Neurosift v2 / v3`;
+    $("title").textContent = f.title;
+    $("check").replaceChildren(...(f.check ?? []).map((c) => {
+      const li = document.createElement("li");
+      li.textContent = c;
+      return li;
+    }));
+    $("pos").textContent = `${i + 1} / ${features.length}`;
+    for (const v of ["v2", "v3"]) {
+      const url = data[v] + (f[`${v}Path`] ?? f.path);
+      $(`${v}link`).href = url;
+      $(`${v}frame`).src = url;
+    }
+    for (const a of nav.querySelectorAll("a")) {
+      a.classList.toggle("active", a.dataset.id === f.id);
+    }
+    nav.querySelector("a.active")?.scrollIntoView({ block: "nearest" });
+  };
+
+  $("prev").onclick = () => go(current() - 1);
+  $("next").onclick = () => go(current() + 1);
+  document.addEventListener("keydown", (e) => {
+    if (e.target.closest?.("input, textarea")) return;
+    if (e.key === "j") go(current() + 1);
+    if (e.key === "k") go(current() - 1);
+  });
+  window.addEventListener("hashchange", show);
+  show();
+})();
+</script>
+</body>
+</html>

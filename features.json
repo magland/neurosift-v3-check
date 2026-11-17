@@ -1,0 +1,333 @@
+{
+  "v2": "https://neurosift.app",
+  "v3": "https://v3.neurosift.app",
+  "features": [
+    {
+      "id": "home",
+      "group": "Browse",
+      "title": "Home page",
+      "path": "/",
+      "check": [
+        "Search box and archive links",
+        "Links on the page open the right pages"
+      ]
+    },
+    {
+      "id": "dandi",
+      "group": "Browse",
+      "title": "DANDI archive",
+      "path": "/dandi",
+      "check": [
+        "Dandisets are listed",
+        "Search by text, and the search modes",
+        "Sorting and filtering by neurodata type"
+      ]
+    },
+    {
+      "id": "ember",
+      "group": "Browse",
+      "title": "EMBER archive",
+      "path": "/ember",
+      "check": [
+        "EMBER dandisets are listed",
+        "Search"
+      ]
+    },
+    {
+      "id": "openneuro",
+      "group": "Browse",
+      "title": "OpenNeuro archive",
+      "path": "/openneuro",
+      "check": [
+        "OpenNeuro datasets are listed",
+        "Search"
+      ]
+    },
+    {
+      "id": "dandiset",
+      "group": "Datasets",
+      "title": "Dandiset page",
+      "path": "/dandiset/000673?dandisetVersion=0.250122.0110",
+      "check": [
+        "Title, description, contributors and other metadata",
+        "Version picker",
+        "File list, and opening a file"
+      ]
+    },
+    {
+      "id": "dandiset-file",
+      "group": "Datasets",
+      "title": "Dandiset with a file open",
+      "path": "/dandiset/000673?dandisetVersion=0.250122.0110&tab=sub-1/sub-1_ses-1_ecephys%2Bimage.nwb|",
+      "check": [
+        "The NWB file opens inside the dandiset page"
+      ]
+    },
+    {
+      "id": "ember-dandiset",
+      "group": "Datasets",
+      "title": "EMBER dandiset page",
+      "path": "/ember-dandiset/000207",
+      "check": [
+        "Metadata and file list",
+        "Opening a file"
+      ]
+    },
+    {
+      "id": "openneuro-tsv",
+      "group": "Datasets",
+      "title": "OpenNeuro dataset with a TSV file",
+      "path": "/openneuro-dataset/ds000001?tab=participants.tsv|",
+      "check": [
+        "Dataset metadata and file tree",
+        "participants.tsv shown as a table"
+      ]
+    },
+    {
+      "id": "openneuro-snirf",
+      "group": "Datasets",
+      "title": "OpenNeuro dataset with a SNIRF file",
+      "path": "/openneuro-dataset/ds005927?tab=sub-001/sub-001_task-breathhold_nirs.snirf|0eb79a7df397c7d5229dc3cb59cdeb791a4b23e3",
+      "check": [
+        "The SNIRF file opens and its contents are shown"
+      ]
+    },
+    {
+      "id": "nwb-overview",
+      "group": "NWB file",
+      "title": "NWB file overview",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110",
+      "check": [
+        "Session metadata on the left",
+        "Object list under Widgets, grouped as in v2",
+        "Opening objects in tabs, and closing tabs",
+        "Link back to the dandiset"
+      ]
+    },
+    {
+      "id": "nwb-by-path",
+      "group": "NWB file",
+      "title": "NWB file by dandiset path",
+      "path": "/nwb?dandisetId=000673&dandisetVersion=0.250122.0110&path=sub-1/sub-1_ses-1_ecephys%2Bimage.nwb",
+      "check": [
+        "The file is found from its path and opens"
+      ]
+    },
+    {
+      "id": "nwb-hdf5",
+      "group": "NWB file",
+      "title": "HDF5 tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=hdf5",
+      "check": [
+        "Groups and datasets, expandable",
+        "Attributes, shapes and dtypes",
+        "Dataset values"
+      ]
+    },
+    {
+      "id": "nwb-alignment",
+      "group": "NWB file",
+      "title": "Timeseries alignment tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=timeseries-alignment",
+      "check": [
+        "Each time series drawn as a bar over its time range"
+      ]
+    },
+    {
+      "id": "nwb-python",
+      "group": "NWB file",
+      "title": "Python usage tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=python-usage",
+      "check": [
+        "Python script that loads the file and its objects",
+        "Copy button"
+      ]
+    },
+    {
+      "id": "nwb-specs",
+      "group": "NWB file",
+      "title": "Specifications tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=specifications",
+      "check": [
+        "Namespaces and neurodata types embedded in the file"
+      ]
+    },
+    {
+      "id": "nwb-default-view",
+      "group": "NWB file",
+      "title": "Default object view",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=/processing/ophys",
+      "check": [
+        "Group contents, attributes and datasets",
+        "Opening a child object",
+        "Load in Python"
+      ]
+    },
+    {
+      "id": "nwb-table",
+      "group": "NWB file",
+      "title": "Table view (trials)",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=/intervals/trials",
+      "check": [
+        "Columns and rows",
+        "Sorting by a column"
+      ]
+    },
+    {
+      "id": "nwb-combined",
+      "group": "NWB file",
+      "title": "Several objects in one tab",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=[\"/units\",\"Raster|/units\"]",
+      "check": [
+        "Units table and raster shown together",
+        "Shared time controls"
+      ]
+    },
+    {
+      "id": "timeseries",
+      "group": "Views",
+      "title": "Time series",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=view:SimpleTimeseries|/acquisition/LFPs",
+      "check": [
+        "Traces drawn",
+        "Changing the time window, zoom and pan",
+        "Choosing channels and channel separation",
+        "Message when zoomed out too far to draw"
+      ]
+    },
+    {
+      "id": "timeseries-settings",
+      "group": "Views",
+      "title": "Time series with settings in the link",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=/acquisition/LFPs&channels=8-15&separation=2&start=120&duration=5",
+      "check": [
+        "Opens on channels 8 to 15, separation 2, window 120 to 125 s",
+        "As of 2026-11-17, v2 ignores these settings and opens on channels 0 to 3 at time 0"
+      ]
+    },
+    {
+      "id": "spectrogram",
+      "group": "Views",
+      "title": "Spectrogram",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=view:LfpSpectrogram|/acquisition/LFPs",
+      "check": [
+        "Spectrogram drawn",
+        "Settings panel: estimator, taper, colormap",
+        "Channel and time window"
+      ]
+    },
+    {
+      "id": "raster",
+      "group": "Views",
+      "title": "Raster",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=view:Raster|/units",
+      "check": [
+        "Spike times per unit",
+        "Changing which units are shown",
+        "Time window"
+      ]
+    },
+    {
+      "id": "psth",
+      "group": "Views",
+      "title": "PSTH",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/c04f6b30-82bf-40e1-9210-34f0bcd8be24/download/&dandisetId=000409&dandisetVersion=draft&tab=view:PSTH|/intervals/trials",
+      "check": [
+        "Choosing units",
+        "Align to a column, group by a category",
+        "Window, raster, histogram, smoothing, bins"
+      ]
+    },
+    {
+      "id": "psth-hash",
+      "group": "Views",
+      "title": "PSTH with settings after #",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/c04f6b30-82bf-40e1-9210-34f0bcd8be24/download/&dandisetId=000409&dandisetVersion=draft&tab=view:PSTH|/intervals/trials#units=0,1",
+      "check": [
+        "Opens with units 0 and 1 selected"
+      ]
+    },
+    {
+      "id": "event-related",
+      "group": "Views",
+      "title": "Event-related signal",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=view:EventRelatedSignal|/intervals/trials",
+      "check": [
+        "Choosing the series and channels",
+        "Align to, window, grouping"
+      ]
+    },
+    {
+      "id": "spatial-series",
+      "group": "Views",
+      "title": "Spatial series (X/Y)",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/407d6e5f-2a16-4879-b38f-b74cad7b9e24/download/&dandisetId=000871&dandisetVersion=draft&tab=view:SpatialSeriesXY|/acquisition/EyeTracking/pupil_tracking",
+      "check": [
+        "X/Y trajectory drawn",
+        "Time window"
+      ]
+    },
+    {
+      "id": "image",
+      "group": "Views",
+      "title": "Image",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=/processing/ophys/SummaryImages/maximum_intensity_projection",
+      "check": [
+        "Image drawn",
+        "Brightness and contrast"
+      ]
+    },
+    {
+      "id": "image-segmentation",
+      "group": "Views",
+      "title": "Image segmentation",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=view:ImageSegmentation|/processing/ophys/ImageSegmentation",
+      "check": [
+        "ROI masks drawn",
+        "Choosing the plane segmentation",
+        "Swap and flip axes, zoom"
+      ]
+    },
+    {
+      "id": "pose",
+      "group": "Views",
+      "title": "Pose estimation",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/70af470b-7cbe-4b9d-8490-9cdf584fd9e6/download/&dandisetId=000231&dandisetVersion=draft&tab=view:PoseEstimation|/processing/behavior/raw_position_whisker_C0",
+      "check": [
+        "Markers drawn",
+        "Play, trails, hiding markers",
+        "Pose only, and video underneath when available"
+      ]
+    },
+    {
+      "id": "icephys",
+      "group": "Views",
+      "title": "Intracellular recordings (icephys)",
+      "path": "/nwb?url=https://api.dandiarchive.org/api/assets/b2860f39-ba08-4b5f-8e12-c4b51ad6ccba/download/&dandisetId=001354&dandisetVersion=0.250312.0036&tab=icephys",
+      "check": [
+        "Sweeps drawn",
+        "Protocol, condition, repetition",
+        "Color by and panels by electrode",
+        "Window and lock y"
+      ]
+    },
+    {
+      "id": "settings",
+      "group": "Other",
+      "title": "Settings page",
+      "path": "/settings",
+      "check": [
+        "Same settings available"
+      ]
+    },
+    {
+      "id": "guide",
+      "group": "Other",
+      "title": "Guide page",
+      "path": "/guide",
+      "check": [
+        "Guide content"
+      ]
+    }
+  ]
+}
