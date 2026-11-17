@@ -10,7 +10,8 @@
       "check": [
         "Search box and archive links",
         "Links on the page open the right pages"
-      ]
+      ],
+      "issue": 1
     },
     {
       "id": "dandi",
@@ -21,7 +22,8 @@
         "Dandisets are listed",
         "Search by text, and the search modes",
         "Sorting and filtering by neurodata type"
-      ]
+      ],
+      "issue": 2
     },
     {
       "id": "ember",
@@ -31,7 +33,8 @@
       "check": [
         "EMBER dandisets are listed",
         "Search"
-      ]
+      ],
+      "issue": 3
     },
     {
       "id": "openneuro",
@@ -41,7 +44,8 @@
       "check": [
         "OpenNeuro datasets are listed",
         "Search"
-      ]
+      ],
+      "issue": 4
     },
     {
       "id": "dandiset",
@@ -52,7 +56,8 @@
         "Title, description, contributors and other metadata",
         "Version picker",
         "File list, and opening a file"
-      ]
+      ],
+      "issue": 5
     },
     {
       "id": "dandiset-file",
@@ -61,7 +66,8 @@
       "path": "/dandiset/000673?dandisetVersion=0.250122.0110&tab=sub-1/sub-1_ses-1_ecephys%2Bimage.nwb|",
       "check": [
         "The NWB file opens inside the dandiset page"
-      ]
+      ],
+      "issue": 6
     },
     {
       "id": "ember-dandiset",
@@ -71,7 +77,8 @@
       "check": [
         "Metadata and file list",
         "Opening a file"
-      ]
+      ],
+      "issue": 7
     },
     {
       "id": "openneuro-tsv",
@@ -81,7 +88,8 @@
       "check": [
         "Dataset metadata and file tree",
         "participants.tsv shown as a table"
-      ]
+      ],
+      "issue": 8
     },
     {
       "id": "openneuro-snirf",
@@ -90,7 +98,8 @@
       "path": "/openneuro-dataset/ds005927?tab=sub-001/sub-001_task-breathhold_nirs.snirf|0eb79a7df397c7d5229dc3cb59cdeb791a4b23e3",
       "check": [
         "The SNIRF file opens and its contents are shown"
-      ]
+      ],
+      "issue": 9
     },
     {
       "id": "openneuro-edf",
@@ -100,7 +109,8 @@
       "check": [
         "EDF channels drawn over time",
         "Time window and channel choice"
-      ]
+      ],
+      "issue": 10
     },
     {
       "id": "openneuro-nifti",
@@ -110,7 +120,8 @@
       "check": [
         "Volume slices shown",
         "Moving through slices"
-      ]
+      ],
+      "issue": 11
     },
     {
       "id": "openneuro-json",
@@ -119,7 +130,8 @@
       "path": "/openneuro-dataset/ds000001?tab=dataset_description.json|",
       "check": [
         "JSON contents shown"
-      ]
+      ],
+      "issue": 12
     },
     {
       "id": "nwb-overview",
@@ -131,7 +143,8 @@
         "Object list under Widgets, grouped as in v2",
         "Opening objects in tabs, and closing tabs",
         "Link back to the dandiset"
-      ]
+      ],
+      "issue": 13
     },
     {
       "id": "nwb-by-path",
@@ -140,7 +153,8 @@
       "path": "/nwb?dandisetId=000673&dandisetVersion=0.250122.0110&path=sub-1/sub-1_ses-1_ecephys%2Bimage.nwb",
       "check": [
         "The file is found from its path and opens"
-      ]
+      ],
+      "issue": 14
     },
     {
       "id": "nwb-hdf5",
@@ -151,7 +165,8 @@
         "Groups and datasets, expandable",
         "Attributes, shapes and dtypes",
         "Dataset values"
-      ]
+      ],
+      "issue": 15
     },
     {
       "id": "nwb-alignment",
@@ -160,7 +175,8 @@
       "path": "/nwb?url=https://api.dandiarchive.org/api/assets/f02db27e-82eb-41dd-865a-a08bb41491da/download/&dandisetId=000728&dandisetVersion=draft&tab=timeseries-alignment",
       "check": [
         "Each time series drawn as a bar over its time range"
-      ]
+      ],
+      "issue": 16
     },
     {
       "id": "nwb-python",
@@ -170,7 +186,8 @@
       "check": [
         "Python script that loads the file and its objects",
         "Copy button"
-      ]
+      ],
+      "issue": 17
     },
     {
       "id": "nwb-specs",
@@ -179,7 +196,8 @@
       "path": "/nwb?url=https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/&dandisetId=000673&dandisetVersion=0.250122.0110&tab=specifications",
       "check": [
         "Namespaces and neurodata types embedded in the file"
-      ]
+      ],
+      "issue": 18
     },
     {
       "id": "nwb-default-view",
@@ -190,7 +208,8 @@
         "Group contents, attributes and datasets",
         "Opening a child object",
         "Load in Python"
-      ]
+      ],
+      "issue": 19
     },
     {
       "id": "nwb-table",
@@ -200,7 +219,8 @@
       "check": [
         "Columns and rows",
         "Sorting by a column"
-      ]
+      ],
+      "issue": 20
     },
     {
       "id": "nwb-combined",
@@ -210,7 +230,8 @@
       "check": [
         "Units table and raster shown together",
         "Shared time controls"
-      ]
+      ],
+      "issue": 21
     },
     {
       "id": "nwb-videos",
@@ -220,7 +241,8 @@
       "check": [
         "The file's external videos listed and playable",
         "Order, layout, time"
-      ]
+      ],
+      "issue": 22
     },
     {
       "id": "timeseries",
@@ -232,7 +254,8 @@
         "Changing the time window, zoom and pan",
         "Choosing channels and channel separation",
         "Message when zoomed out too far to draw"
-      ]
+      ],
+      "issue": 23
     },
     {
       "id": "timeseries-settings",
@@ -242,7 +265,8 @@
       "check": [
         "Opens on channels 8 to 15, separation 2, window 120 to 125 s",
         "As of 2026-11-17, v2 ignores these settings and opens on channels 0 to 3 at time 0"
-      ]
+      ],
+      "issue": 24
     },
     {
       "id": "spectrogram",
@@ -253,7 +277,8 @@
         "Spectrogram drawn",
         "Settings panel: estimator, taper, colormap",
         "Channel and time window"
-      ]
+      ],
+      "issue": 25
     },
     {
       "id": "raster",
@@ -264,7 +289,8 @@
         "Spike times per unit",
         "Changing which units are shown",
         "Time window"
-      ]
+      ],
+      "issue": 26
     },
     {
       "id": "psth",
@@ -275,7 +301,8 @@
         "Choosing units",
         "Align to a column, group by a category",
         "Window, raster, histogram, smoothing, bins"
-      ]
+      ],
+      "issue": 27
     },
     {
       "id": "psth-hash",
@@ -284,7 +311,8 @@
       "path": "/nwb?url=https://api.dandiarchive.org/api/assets/c04f6b30-82bf-40e1-9210-34f0bcd8be24/download/&dandisetId=000409&dandisetVersion=draft&tab=view:PSTH|/intervals/trials#units=0,1",
       "check": [
         "Opens with units 0 and 1 selected"
-      ]
+      ],
+      "issue": 28
     },
     {
       "id": "event-related",
@@ -294,7 +322,8 @@
       "check": [
         "Choosing the series and channels",
         "Align to, window, grouping"
-      ]
+      ],
+      "issue": 29
     },
     {
       "id": "spatial-series",
@@ -304,7 +333,8 @@
       "check": [
         "X/Y trajectory drawn",
         "Time window"
-      ]
+      ],
+      "issue": 30
     },
     {
       "id": "interval-series",
@@ -314,7 +344,8 @@
       "check": [
         "Intervals drawn on the time axis",
         "Time window"
-      ]
+      ],
+      "issue": 31
     },
     {
       "id": "events",
@@ -324,7 +355,8 @@
       "check": [
         "Event times drawn",
         "Time window"
-      ]
+      ],
+      "issue": 32
     },
     {
       "id": "behavioral-events",
@@ -334,7 +366,8 @@
       "check": [
         "Left and right lick times drawn",
         "Time window"
-      ]
+      ],
+      "issue": 33
     },
     {
       "id": "image",
@@ -344,7 +377,8 @@
       "check": [
         "Image drawn",
         "Brightness and contrast"
-      ]
+      ],
+      "issue": 34
     },
     {
       "id": "image-collection",
@@ -354,7 +388,8 @@
       "check": [
         "All images in the collection shown",
         "Opening one image"
-      ]
+      ],
+      "issue": 35
     },
     {
       "id": "two-photon",
@@ -365,7 +400,8 @@
         "Frames drawn",
         "Frame slider and playback",
         "Brightness and contrast"
-      ]
+      ],
+      "issue": 36
     },
     {
       "id": "image-segmentation",
@@ -376,7 +412,8 @@
         "ROI masks drawn",
         "Choosing the plane segmentation",
         "Swap and flip axes, zoom"
-      ]
+      ],
+      "issue": 37
     },
     {
       "id": "plane-segmentation",
@@ -386,7 +423,8 @@
       "check": [
         "ROI masks drawn",
         "Selecting ROIs"
-      ]
+      ],
+      "issue": 38
     },
     {
       "id": "trial-aligned",
@@ -396,7 +434,8 @@
       "check": [
         "ROI responses aligned to the stimulus intervals",
         "Choosing ROIs, align column, window"
-      ]
+      ],
+      "issue": 39
     },
     {
       "id": "pose",
@@ -407,7 +446,8 @@
         "Markers drawn",
         "Play, trails, hiding markers",
         "Pose only, and video underneath when available"
-      ]
+      ],
+      "issue": 40
     },
     {
       "id": "external-video",
@@ -417,7 +457,8 @@
       "check": [
         "The external video file found and played",
         "Time in sync with the recording"
-      ]
+      ],
+      "issue": 41
     },
     {
       "id": "icephys",
@@ -429,7 +470,8 @@
         "Protocol, condition, repetition",
         "Color by and panels by electrode",
         "Window and lock y"
-      ]
+      ],
+      "issue": 42
     },
     {
       "id": "settings",
@@ -438,7 +480,8 @@
       "path": "/settings",
       "check": [
         "Same settings available"
-      ]
+      ],
+      "issue": 43
     },
     {
       "id": "guide",
@@ -447,7 +490,8 @@
       "path": "/guide",
       "check": [
         "Guide content"
-      ]
+      ],
+      "issue": 44
     }
   ]
 }
